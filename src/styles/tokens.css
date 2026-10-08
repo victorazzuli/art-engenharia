@@ -1,0 +1,47 @@
+/* Design Tokens - Auto-generated */
+/* Do not edit directly - modify tokens.json instead */
+
+/* === PRIMITIVES === */
+:root {
+  --primitive-color-night-300: #A7B1BE;
+  --primitive-color-night-500: #5B6878;
+  --primitive-color-night-700: #263241;
+  --primitive-color-night-800: #18212C;
+  --primitive-color-night-900: #10161E;
+  --primitive-color-night-950: #0A0E13;
+  --primitive-color-paper-50: #F7F5F0;
+  --primitive-color-paper-100: #EDE9E0;
+  --primitive-color-paper-200: #DCD6C9;
+  --primitive-color-ink-600: #4A5361;
+  --primitive-color-ink-900: #0D1117;
+  --primitive-color-amber-300: #FFC861;
+  --primitive-color-amber-400: #F5A524;
+  --primitive-color-amber-600: #B86E00;
+  --primitive-color-whatsapp-500: #25D366;
+  --primitive-color-whatsapp-600: #1EB858;
+  --primitive-color-white: #FFFFFF;
+}
+
+/* === SEMANTIC === */
+:root {
+  --color-bg: #0A0E13;
+  --color-surface: #18212C;
+  --color-primary: #F5A524;
+  --color-secondary: #263241;
+  --color-text: #F7F5F0;
+  --color-muted: #A7B1BE;
+  --color-accent: #FFC861;
+  --color-light-bg: #F7F5F0;
+  --color-light-surface: #EDE9E0;
+  --color-light-text: #0D1117;
+  --color-light-muted: #4A5361;
+  --color-primary-on-light: #B86E00;
+}
+
+/* === COMPONENTS === */
+:root {
+  --button-primary-bg: #F5A524;
+  --button-primary-fg: #0D1117;
+  --button-whatsapp-bg: #25D366;
+  --button-whatsapp-fg: #0D1117;
+}

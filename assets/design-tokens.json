@@ -1,0 +1,57 @@
+{
+  "primitive": {
+    "color": {
+      "night": {
+        "950": { "$value": "#0A0E13", "$type": "color" },
+        "900": { "$value": "#10161E", "$type": "color" },
+        "800": { "$value": "#18212C", "$type": "color" },
+        "700": { "$value": "#263241", "$type": "color" },
+        "500": { "$value": "#5B6878", "$type": "color" },
+        "300": { "$value": "#A7B1BE", "$type": "color" }
+      },
+      "paper": {
+        "50": { "$value": "#F7F5F0", "$type": "color" },
+        "100": { "$value": "#EDE9E0", "$type": "color" },
+        "200": { "$value": "#DCD6C9", "$type": "color" }
+      },
+      "ink": {
+        "900": { "$value": "#0D1117", "$type": "color" },
+        "600": { "$value": "#4A5361", "$type": "color" }
+      },
+      "amber": {
+        "300": { "$value": "#FFC861", "$type": "color" },
+        "400": { "$value": "#F5A524", "$type": "color" },
+        "600": { "$value": "#B86E00", "$type": "color" }
+      },
+      "whatsapp": {
+        "500": { "$value": "#25D366", "$type": "color" },
+        "600": { "$value": "#1EB858", "$type": "color" }
+      },
+      "white": { "$value": "#FFFFFF", "$type": "color" }
+    }
+  },
+  "semantic": {
+    "color": {
+      "bg": { "$value": "{primitive.color.night.950}", "$type": "color" },
+      "surface": { "$value": "{primitive.color.night.800}", "$type": "color" },
+      "primary": { "$value": "{primitive.color.amber.400}", "$type": "color" },
+      "secondary": { "$value": "{primitive.color.night.700}", "$type": "color" },
+      "text": { "$value": "{primitive.color.paper.50}", "$type": "color" },
+      "muted": { "$value": "{primitive.color.night.300}", "$type": "color" },
+      "accent": { "$value": "{primitive.color.amber.300}", "$type": "color" },
+      "light-bg": { "$value": "{primitive.color.paper.50}", "$type": "color" },
+      "light-surface": { "$value": "{primitive.color.paper.100}", "$type": "color" },
+      "light-text": { "$value": "{primitive.color.ink.900}", "$type": "color" },
+      "light-muted": { "$value": "{primitive.color.ink.600}", "$type": "color" },
+      "primary-on-light": { "$value": "{primitive.color.amber.600}", "$type": "color" }
+    }
+  },
+  "component": {
+    "button": {
+      "primary-bg": { "$value": "{semantic.color.primary}", "$type": "color" },
+      "primary-fg": { "$value": "{primitive.color.ink.900}", "$type": "color" },
+      "whatsapp-bg": { "$value": "{primitive.color.whatsapp.500}", "$type": "color" },
+      "whatsapp-fg": { "$value": "{primitive.color.ink.900}", "$type": "color" }
+    }
+  }
+}
