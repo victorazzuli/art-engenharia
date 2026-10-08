@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   formatDetection: { telephone: false },
 };
 
-export const viewport: Viewport = { themeColor: "#0A0E13", width: "device-width", initialScale: 1, viewportFit: "cover" };
+export const viewport: Viewport = { themeColor: "#070921", width: "device-width", initialScale: 1, viewportFit: "cover" };
 
 const DAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const jsonLd = {
@@ -36,7 +36,9 @@ const jsonLd = {
   url: COMPANY.url,
   telephone: `+${WHATSAPP_NUMBER}`,
   image: `${COMPANY.url}/opengraph-image`,
-  logo: `${COMPANY.url}/brand/logo-dark-ink-2048.png`,
+  logo: `${COMPANY.url}/brand/logo-2048.png`,
+  email: COMPANY.email ?? undefined,
+  sameAs: [COMPANY.instagram.url, COMPANY.facebook],
   address: {
     "@type": "PostalAddress",
     streetAddress: COMPANY.address.street,
@@ -50,7 +52,7 @@ const jsonLd = {
     .filter(([, h]) => h)
     .map(([d, h]) => ({ "@type": "OpeningHoursSpecification", dayOfWeek: DAYS[+d], opens: h![0], closes: h![1] })),
   aggregateRating: { "@type": "AggregateRating", ratingValue: COMPANY.rating.value, reviewCount: COMPANY.rating.count, bestRating: 5 },
-  areaServed: { "@type": "City", name: "Santo André" },
+  areaServed: COMPANY.servedPlaces.map((name) => ({ "@type": "Place", name })),
   knowsAbout: ["Energia solar fotovoltaica", "Homologação Enel", "Instalações elétricas"],
 };
 

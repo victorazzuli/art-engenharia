@@ -84,7 +84,7 @@ export function Hero() {
         )}
       </div>
       {/* Overlay: escurece embaixo/esquerda onde fica o texto; mantém o dourado do sol no alto */}
-      <div aria-hidden className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgb(var(--rgb-bg)/0.6)_0%,rgb(var(--rgb-bg)/0.35)_22%,rgb(var(--rgb-bg)/0.82)_48%,rgb(var(--rgb-bg)/0.94)_75%,rgb(var(--rgb-bg))_100%)] md:bg-[linear-gradient(90deg,rgb(var(--rgb-bg)/0.92)_0%,rgb(var(--rgb-bg)/0.6)_45%,rgb(var(--rgb-bg)/0.1)_80%),linear-gradient(180deg,rgb(var(--rgb-bg)/0.5)_0%,transparent_30%,transparent_70%,rgb(var(--rgb-bg))_100%)]" />
+      <div aria-hidden className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgb(var(--rgb-bg)/0.7)_0%,rgb(var(--rgb-bg)/0.62)_22%,rgb(var(--rgb-bg)/0.86)_45%,rgb(var(--rgb-bg)/0.94)_75%,rgb(var(--rgb-bg))_100%)] md:bg-[linear-gradient(90deg,rgb(var(--rgb-bg)/0.92)_0%,rgb(var(--rgb-bg)/0.6)_45%,rgb(var(--rgb-bg)/0.1)_80%),linear-gradient(180deg,rgb(var(--rgb-bg)/0.5)_0%,transparent_30%,transparent_70%,rgb(var(--rgb-bg))_100%)]" />
 
       <div className="wrap">
         <div className="max-w-[920px]">

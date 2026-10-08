@@ -6,18 +6,20 @@
 
 /* Canais RGB dos tokens (para opacidade no Tailwind). Manter em sincronia com tokens.css. */
 :root {
-  --rgb-bg: 10 14 19;          /* --color-bg */
-  --rgb-surface: 24 33 44;     /* --color-surface */
-  --rgb-primary: 245 165 36;   /* --color-primary (âmbar solar) */
-  --rgb-secondary: 38 50 65;   /* --color-secondary */
-  --rgb-accent: 255 200 97;    /* --color-accent */
+  --rgb-bg: 7 9 33;            /* --color-bg (azul-noite da marca) */
+  --rgb-surface: 21 26 69;     /* --color-surface */
+  --rgb-primary: 253 104 11;   /* --color-primary (laranja do logo) */
+  --rgb-secondary: 47 130 86;   /* --color-secondary (verde do logo) */
+  --rgb-accent: 246 141 84;    /* --color-accent (laranja claro) */
   --rgb-text: 247 245 240;     /* --color-text */
-  --rgb-muted: 167 177 190;    /* --color-muted */
+  --rgb-muted: 174 178 207;    /* --color-muted */
   --rgb-paper: 247 245 240;    /* --color-light-bg */
   --rgb-paper-2: 237 233 224;  /* --color-light-surface */
   --rgb-ink: 13 17 23;         /* --color-light-text */
   --rgb-ink-muted: 74 83 97;   /* --color-light-muted */
-  --rgb-primary-deep: 140 82 0; /* âmbar para texto em fundo claro (contraste 5.3:1) */
+  --rgb-primary-deep: 176 67 0; /* laranja para texto em fundo claro (contraste 5.3:1) */
+  --rgb-navy: 5 4 103;         /* azul do logo */
+  --rgb-green: 8 104 52;       /* verde do logo */
   --rgb-whatsapp: 37 211 102;  /* --button-whatsapp-bg: só botões de WhatsApp */
   --header-h: 72px;
   --bar-h: 72px;
@@ -93,3 +95,14 @@
 .range:active::-webkit-slider-thumb { transform: scale(1.15); }
 .range:focus-visible { outline: none; }
 .range:focus-visible::-webkit-slider-thumb { outline: 3px solid rgb(var(--rgb-primary-deep)); outline-offset: 3px; }
+
+/* Assinatura da marca: os três paralelogramos do logo (verde, azul, laranja) antes de cada rótulo */
+.label::before {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 9px;
+  margin-right: 10px;
+  vertical-align: 1px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 9'><path d='M3 0h6L6 9H0z' fill='%232F8256'/><path d='M11 0h6l-3 9H8z' fill='%23626596'/><path d='M19 0h6l-3 9h-6z' fill='%23FD680B'/></svg>") no-repeat center / contain;
+}

@@ -1,4 +1,7 @@
 /**
+ * CONFLITOS a confirmar: o Facebook mostra telefone (11) 98775-1806 e bairro "Vila Linda";
+ * o Google (fonte passada pelo Victor) mostra (11) 98263-5120 e "Vila Junqueira". Usamos o Google.
+ *
  * Dados reais da empresa — perfil do Google Maps "Energia Solar - Art Engenharia Elétrica"
  * (informados pelo Victor em 08/10/2026). Não inventar nada além disto.
  * Campos com `null` = A CONFIRMAR com o cliente (não aparecem no site enquanto vazios).
@@ -35,12 +38,15 @@ export const COMPANY = {
   hours: { 0: null, 1: ["08:00", "18:00"], 2: ["08:00", "18:00"], 3: ["08:00", "18:00"], 4: ["08:00", "18:00"], 5: ["08:00", "18:00"], 6: ["08:00", "18:00"] } as Record<number, [string, string] | null>,
   hoursLabel: "Segunda a sábado, 8h às 18h",
 
+  // ——— Da página oficial no Facebook (facebook.com/artengeletrica)
+  instagram: { handle: "@artengeletrica", url: "https://www.instagram.com/artengeletrica/" },
+  facebook: "https://www.facebook.com/artengeletrica/",
+  email: "rodrigo@artengenhariaeletrica.com.br" as string | null,
+  /** Locais de obras citados nos posts da Art */
+  servedPlaces: ["Santo André", "São Bernardo do Campo", "São Paulo", "Córrego do Bom Jesus (MG)"],
+
   // ——— A CONFIRMAR com o cliente (null = não exibe)
-  instagram: null as string | null,
   cnpj: null as string | null,
-  email: null as string | null,
-  /** Cidades atendidas além de Santo André */
-  serviceArea: null as string | null,
 
   preview: process.env.NEXT_PUBLIC_PREVIEW === "1",
 };

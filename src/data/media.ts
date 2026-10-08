@@ -1,24 +1,86 @@
 /**
- * Mídias do site.
- * HERO: vídeo provisório de banco gratuito (Mixkit #46623, "Aerial view of solar panels in a field
- * at sunset", Mixkit License — uso comercial permitido). É uma usina, não uma obra da Art:
- * SUBSTITUIR por um vídeo real de drone de uma instalação da Art assim que houver.
+ * Mídias do site — tudo REAL, da página oficial da Art no Facebook (facebook.com/artengeletrica).
+ *
+ * HERO: vídeo montado a partir das fotos de drone das obras da Art (zoom lento + fusão):
+ * fábrica Ideal Portas e Janelas, residências em São Bernardo do Campo e pousada em MG.
+ * Quando houver um vídeo de drone original, basta trocar os arquivos abaixo.
  */
 export const HERO_VIDEO_SRC = { mp4: "/video/hero-1280.mp4", webm: "/video/hero-1280.webm", mobile: "/video/hero-mobile.mp4" };
 export const HERO_VIDEO_POSTER = { desktop: "/video/hero-poster.webp", mobile: "/video/hero-poster-mobile.webp" };
-export const HERO_VIDEO_CREDIT = "Vídeo ilustrativo (Mixkit)";
+export const HERO_VIDEO_CREDIT = "Obras reais da Art";
 
-/**
- * Galeria de obras: SOMENTE fotos reais da Art. Enquanto não houver, ficam placeholders
- * marcados como "Foto da obra em breve". Para adicionar: coloque o arquivo em
- * public/img/obras/ e preencha src + legenda (tipo de imóvel + bairro/cidade, se informados).
- */
-export type WorkPhoto = { src: string | null; alt: string; caption?: string; w?: number; h?: number };
+/** Galeria de obras: fotos publicadas pela Art. Legenda = tipo + local, como nos posts da empresa. */
+export type WorkPhoto = { src: string | null; alt: string; caption?: string; place?: string; w?: number; h?: number };
 
 export const WORKS: WorkPhoto[] = [
-  { src: null, alt: "Espaço reservado para foto de obra residencial da Art" },
-  { src: null, alt: "Espaço reservado para foto de obra comercial da Art" },
-  { src: null, alt: "Espaço reservado para foto de detalhe da instalação" },
-  { src: null, alt: "Espaço reservado para foto do inversor e quadro elétrico" },
-  { src: null, alt: "Espaço reservado para foto aérea de telhado" },
+  {
+    src: "/img/obras/comercial-ideal-aerea.jpg",
+    alt: "Vista aérea da fábrica Ideal Portas e Janelas com o sistema solar instalado no telhado",
+    caption: "Comercial",
+    place: "Fábrica Ideal Portas e Janelas",
+    w: 900,
+    h: 506,
+  },
+  {
+    src: "/img/obras/residencial-sao-bernardo-represa.jpg",
+    alt: "Placas solares em telhado residencial com a represa ao fundo, em São Bernardo do Campo",
+    caption: "Residencial",
+    place: "São Bernardo do Campo",
+    w: 900,
+    h: 506,
+  },
+  {
+    src: "/img/obras/comercial-santa-terezinha.jpg",
+    alt: "Vista aérea de comércio com placas solares no bairro Santa Terezinha, em Santo André",
+    caption: "Comercial",
+    place: "Santa Terezinha, Santo André",
+    w: 900,
+    h: 506,
+  },
+  {
+    src: "/img/obras/pousada-corrego-do-bom-jesus.jpg",
+    alt: "Vista aérea de pousada no campo com placas solares em um dos telhados",
+    caption: "Pousada",
+    place: "Córrego do Bom Jesus, MG",
+    w: 1440,
+    h: 1795,
+  },
+  {
+    src: "/img/obras/residencial-bosque-da-saude.jpg",
+    alt: "Módulos solares instalados em telhado residencial no Bosque da Saúde, São Paulo",
+    caption: "Residencial",
+    place: "Bosque da Saúde, São Paulo",
+    w: 1440,
+    h: 1080,
+  },
+  {
+    src: "/img/obras/residencial-sao-bernardo-condominio.jpg",
+    alt: "Casa em condomínio com sistema solar no telhado, vista de cima",
+    caption: "Residencial",
+    place: "São Bernardo do Campo",
+    w: 1200,
+    h: 900,
+  },
+  {
+    src: "/img/obras/comercial-ideal-telhado.jpg",
+    alt: "Telhado da fábrica coberto por fileiras de módulos solares",
+    caption: "Comercial",
+    place: "Fábrica Ideal Portas e Janelas",
+    w: 900,
+    h: 506,
+  },
+  {
+    src: "/img/obras/residencial-sao-bernardo-modulos.jpg",
+    alt: "Detalhe dos módulos solares instalados sobre telhas, com palmeiras ao fundo",
+    caption: "Residencial",
+    place: "São Bernardo do Campo",
+    w: 1440,
+    h: 1080,
+  },
 ];
+
+/**
+ * Caso real publicado pela Art (Facebook, 16/07/2024): "Após 1 mês de instalação do sistema
+ * solar, este foi o resultado da conta de energia dele!" — contas Enel de 02/2024 e 06/2024.
+ */
+export const REAL_BILL = { before: 878.07, after: 59.55, beforeMonth: "fev/2024", afterMonth: "jun/2024", source: "Post da Art no Facebook, jul/2024" };

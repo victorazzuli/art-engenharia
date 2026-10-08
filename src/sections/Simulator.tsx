@@ -3,11 +3,13 @@ import { useId, useMemo, useState } from "react";
 import { motion } from "motion/react";
 import { PROPERTY_TYPES, SIMULATOR, estimate, type PropertyType } from "@/data/simulator.config";
 import { waLink } from "@/data/company";
+import { REAL_BILL } from "@/data/media";
 import { AnimatedBRL } from "@/components/ui/AnimatedNumber";
 import { IconWhatsApp } from "@/components/ui/Icons";
 import { brl, cx } from "@/utils/format";
 
 const ease = [0.16, 1, 0.3, 1] as const;
+const brlCents = (v: number) => new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(v).replace(/ /g, " ");
 
 export function buildSimulatorMessage(bill: number, type: PropertyType, monthly: number) {
   return [
@@ -120,6 +122,25 @@ export function Simulator() {
                 </div>
               </fieldset>
             </div>
+
+            {/* Caso real (post da própria Art): a estimativa não é promessa, mas isto aconteceu */}
+            <figure className="mt-12 rounded-[22px] border-2 border-ink bg-white p-6">
+              <p className="label text-primary-deep">Caso real de um cliente da Art</p>
+              <div className="mt-4 flex flex-wrap items-end gap-x-6 gap-y-3">
+                <div>
+                  <p className="font-mono text-xs uppercase tracking-[0.1em] text-ink-muted">Conta Enel · {REAL_BILL.beforeMonth}</p>
+                  <p className="tabular text-[clamp(1.6rem,3.4vw,2.2rem)] font-bold text-ink-muted line-through decoration-2">{brlCents(REAL_BILL.before)}</p>
+                </div>
+                <svg viewBox="0 0 40 12" width="40" height="12" aria-hidden className="mb-4 text-primary-deep">
+                  <path d="M0 6h36M30 1l6 5-6 5" fill="none" stroke="currentColor" strokeWidth="2" />
+                </svg>
+                <div>
+                  <p className="font-mono text-xs uppercase tracking-[0.1em] text-ink-muted">Conta Enel · {REAL_BILL.afterMonth}</p>
+                  <p className="tabular text-[clamp(1.6rem,3.4vw,2.2rem)] font-bold text-primary-deep">{brlCents(REAL_BILL.after)}</p>
+                </div>
+              </div>
+              <figcaption className="mt-3 text-[13px] text-ink-muted">Resultado depois da instalação, publicado pela Art. {REAL_BILL.source}.</figcaption>
+            </figure>
           </div>
 
           {/* Resultado */}

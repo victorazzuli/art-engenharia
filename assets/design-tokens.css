@@ -3,44 +3,48 @@
 
 /* === PRIMITIVES === */
 :root {
-  --primitive-color-night-300: #A7B1BE;
-  --primitive-color-night-500: #5B6878;
-  --primitive-color-night-700: #263241;
-  --primitive-color-night-800: #18212C;
-  --primitive-color-night-900: #10161E;
-  --primitive-color-night-950: #0A0E13;
+  --primitive-color-night-300: #AEB2CF;
+  --primitive-color-night-500: #5D6290;
+  --primitive-color-night-700: #232963;
+  --primitive-color-night-800: #151A45;
+  --primitive-color-night-900: #0C0F2E;
+  --primitive-color-night-950: #070921;
   --primitive-color-paper-50: #F7F5F0;
   --primitive-color-paper-100: #EDE9E0;
   --primitive-color-paper-200: #DCD6C9;
   --primitive-color-ink-600: #4A5361;
   --primitive-color-ink-900: #0D1117;
-  --primitive-color-amber-300: #FFC861;
-  --primitive-color-amber-400: #F5A524;
-  --primitive-color-amber-600: #B86E00;
   --primitive-color-whatsapp-500: #25D366;
   --primitive-color-whatsapp-600: #1EB858;
   --primitive-color-white: #FFFFFF;
+  --primitive-color-brand-green-600: #086834;
+  --primitive-color-brand-green-400: #2F8256;
+  --primitive-color-brand-navy-700: #050467;
+  --primitive-color-brand-navy-400: #626596;
+  --primitive-color-brand-orange-500: #FD680B;
+  --primitive-color-brand-orange-300: #F68D54;
+  --primitive-color-orange-700: #B04300;
 }
 
 /* === SEMANTIC === */
 :root {
-  --color-bg: #0A0E13;
-  --color-surface: #18212C;
-  --color-primary: #F5A524;
-  --color-secondary: #263241;
+  --color-bg: #070921;
+  --color-surface: #151A45;
+  --color-primary: #FD680B;
+  --color-secondary: #2F8256;
   --color-text: #F7F5F0;
-  --color-muted: #A7B1BE;
-  --color-accent: #FFC861;
+  --color-muted: #AEB2CF;
+  --color-accent: #F68D54;
   --color-light-bg: #F7F5F0;
   --color-light-surface: #EDE9E0;
   --color-light-text: #0D1117;
   --color-light-muted: #4A5361;
-  --color-primary-on-light: #B86E00;
+  --color-primary-on-light: #B04300;
 }
 
 /* === COMPONENTS === */
 :root {
-  --button-primary-bg: #F5A524;
+  --button-primary-bg: #FD680B;
   --button-primary-fg: #0D1117;
   --button-whatsapp-bg: #25D366;
   --button-whatsapp-fg: #0D1117;

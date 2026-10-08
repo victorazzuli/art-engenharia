@@ -1,6 +1,6 @@
-# Art Engenharia Elétrica — Brand Guidelines v0.1 (provisório)
+# ART Engenharia Elétrica — Brand Guidelines v1.0
 
-> Status: rascunho. Logo e fotos são provisórios até o cliente enviar os oficiais.
+> Logo oficial reconstruído em vetor (`public/brand/`). Cores derivadas do logo.
 
 ## Conceito
 **Energia solar sem dor de cabeça.** O cliente não compra placas: compra a tranquilidade de alguém competente resolver tudo, inclusive a Enel.
@@ -22,19 +22,21 @@ Proibido: clichê ecológico ("futuro sustentável", "planeta"), números não c
 4. Obra organizada e limpa.
 5. Pós-venda de verdade, inclusive com a Enel.
 
-## Cores (tokens em `assets/design-tokens.json`)
+## Cores (do logo oficial; tokens em `assets/design-tokens.json`)
 | Papel | Hex | Uso |
 |---|---|---|
-| bg (noite) | #0A0E13 | Seções de impacto, hero |
-| surface | #18212C | Cartões e painéis no escuro |
-| primary (âmbar solar) | #F5A524 | CTA principal, luz, energia |
-| accent | #FFC861 | Brilhos e destaques no escuro |
-| light-bg (papel) | #F7F5F0 | Seções de leitura |
-| light-text | #0D1117 | Texto em seções claras |
+| Verde do logo | #086834 → #2F8256 | Painel "A" (folha); apoio, linha de energia |
+| Azul do logo | #050467 → #626596 | Painel "R" (módulo); base escura do site (#070921) |
+| Laranja do logo | #FD680B → #F68D54 | Painel "T" (raio); CTA principal, destaques |
+| Papel | #F7F5F0 | Seções de leitura |
+| Tinta | #0D1117 | Texto em fundo claro |
 | WhatsApp | #25D366 | Somente botões de WhatsApp |
 
+Assinatura: os três paralelogramos (verde, azul, laranja) antes de cada rótulo de seção.
+
 ## Tipografia
-- **Archivo** (700–800, largura expandida nos títulos): títulos, precisão e força.
+- **Logo**: Montserrat (A R T) e Oswald SemiBold (ENGENHARIA ELÉTRICA), convertidas em curvas.
+- **Archivo** (700–800, largura expandida nos títulos): títulos do site.
 - **IBM Plex Mono** (400–500): cotas, medidas, números, rótulos técnicos.
 - Corpo de texto: Archivo 400/500, mínimo 16 px.
 

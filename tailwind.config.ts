@@ -21,6 +21,8 @@ export default {
         "ink-muted": v("ink-muted"),
         "primary-deep": v("primary-deep"),
         whatsapp: v("whatsapp"),
+        navy: v("navy"),
+        green: v("green"),
       },
       fontFamily: {
         sans: ["var(--font-archivo)", "system-ui", "sans-serif"],

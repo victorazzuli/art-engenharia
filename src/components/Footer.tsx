@@ -6,7 +6,7 @@ export function Footer() {
       <div className="wrap grid gap-10 md:grid-cols-[1.3fr_1fr_1fr]">
         <div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/brand/logo.svg" alt="Art Engenharia Elétrica" width={170} height={43} className="h-10 w-auto" />
+          <img src="/brand/logo-on-dark.svg" alt="ART Engenharia Elétrica" width={130} height={80} className="h-20 w-auto" />
           <p className="mt-4 max-w-[34ch] text-sm leading-relaxed text-muted">Energia solar em Santo André e no ABC. Projeto, instalação e homologação na Enel.</p>
         </div>
         <div className="text-sm">
@@ -20,6 +20,15 @@ export function Footer() {
             {COMPANY.phoneDisplay}
           </a>
           <p className="mt-2 text-muted">{COMPANY.hoursLabel}</p>
+          {COMPANY.email && (
+            <a href={`mailto:${COMPANY.email}`} className="mt-2 block break-all text-muted hover:text-text">
+              {COMPANY.email}
+            </a>
+          )}
+          <p className="mt-3 flex gap-4">
+            <a href={COMPANY.instagram.url} target="_blank" rel="noopener noreferrer" className="text-text hover:text-primary">Instagram</a>
+            <a href={COMPANY.facebook} target="_blank" rel="noopener noreferrer" className="text-text hover:text-primary">Facebook</a>
+          </p>
         </div>
         <nav aria-label="Rodapé" className="text-sm">
           <h2 className="label text-text">Navegação</h2>

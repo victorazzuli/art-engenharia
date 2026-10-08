@@ -38,7 +38,7 @@ export function HowItWorks() {
         <ol ref={ref} className="relative space-y-4 pl-12 sm:pl-16">
           {/* Linha de energia: trilho + preenchimento que acende com a rolagem */}
           <span aria-hidden className="absolute bottom-6 left-[19px] top-6 w-[2px] bg-text/10 sm:left-[27px]" />
-          <motion.span aria-hidden style={{ scaleY: fill }} className="absolute bottom-6 left-[19px] top-6 w-[2px] origin-top bg-gradient-to-b from-accent to-primary sm:left-[27px]" />
+          <motion.span aria-hidden style={{ scaleY: fill }} className="absolute bottom-6 left-[19px] top-6 w-[2px] origin-top bg-gradient-to-b from-secondary to-primary sm:left-[27px]" />
           <motion.span aria-hidden style={{ top: glowTop }} className="absolute left-[14px] h-3 w-3 -translate-y-1/2 rounded-full bg-accent shadow-[0_0_20px_6px_rgb(var(--rgb-primary)/0.6)] sm:left-[22px]" />
 
           {STEPS.map((s, i) => (

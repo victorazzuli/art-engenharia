@@ -12,7 +12,7 @@ export const SERVICES: Service[] = [
   {
     id: "comercial",
     title: "Energia solar para comércio e empresas",
-    text: "Para quem tem conta alta e não pode parar a operação: projeto, instalação e toda a parte com a Enel.",
+    text: "Para quem tem conta alta e não pode parar a operação: de lojas de bairro a fábricas, com projeto, instalação e toda a parte com a Enel.",
     tag: "Comercial",
     primary: true,
   },

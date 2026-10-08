@@ -29,7 +29,7 @@ export function Header() {
         <div className="wrap flex h-full items-center justify-between gap-6">
           <motion.a href="#topo" aria-label="Art Engenharia Elétrica, voltar ao início" initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }} onClick={() => setMenu(false)}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/brand/logo.svg" alt="" width={150} height={38} className="h-9 w-auto sm:h-10" />
+            <img src="/brand/logo-on-dark.svg" alt="" width={84} height={52} className="h-11 w-auto sm:h-12" />
           </motion.a>
           <nav aria-label="Principal" className="hidden lg:block">
             <ul className="flex gap-1">

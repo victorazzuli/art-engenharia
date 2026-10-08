@@ -23,13 +23,17 @@ export const FAQ: Faq[] = [
     a: "Funciona, com geração menor. O sistema é dimensionado pela média do ano, e o que sobra nos dias de sol vira crédito na Enel para compensar os dias de menor geração.",
   },
   {
+    q: "Atendem fora do horário comercial?",
+    a: "O atendimento é de segunda a sábado, das 8h às 18h, e a Art ajusta os atendimentos conforme a necessidade do cliente. Combine o melhor horário com o Rodrigo.",
+  },
+  {
     q: "Precisa de manutenção?",
     a: "É pouca. Basicamente limpeza das placas de tempos em tempos e uma checagem do sistema. Depois da instalação, a Art continua disponível para o que você precisar.",
   },
   {
     q: "Vocês atendem quais cidades?",
-    a: "Estamos em Santo André, no ABC. Para saber se atendemos a sua cidade, chame o Rodrigo no WhatsApp.",
-    confirm: "Lista de cidades atendidas",
+    a: "Estamos em Santo André, no ABC. Já entregamos sistemas em Santo André, São Bernardo do Campo, na capital (Bosque da Saúde) e até em Córrego do Bom Jesus, em Minas Gerais. Para confirmar a sua cidade, chame o Rodrigo no WhatsApp.",
+    confirm: "Raio de atendimento oficial",
   },
   {
     q: "Tem garantia e dá para financiar?",

@@ -11,7 +11,7 @@ export function Contact() {
         <div>
           <p className="label text-accent">Onde estamos</p>
           <h2 id="contato-title" className="title mt-3 text-[clamp(2.2rem,5vw,4rem)]">
-            Art Engenharia Elétrica
+            ART Engenharia Elétrica
           </h2>
           <address className="mt-6 not-italic">
             <p className="text-xl leading-snug">
@@ -39,7 +39,17 @@ export function Contact() {
               <IconWhatsApp size={19} /> Chamar no WhatsApp
             </a>
           </div>
-          <p className="mt-4 font-mono text-sm text-muted">{COMPANY.phoneDisplay}</p>
+          <ul className="mt-6 space-y-1.5 text-[15px] text-muted">
+            <li className="font-mono">{COMPANY.phoneDisplay}</li>
+            {COMPANY.email && (
+              <li>
+                <a href={`mailto:${COMPANY.email}`} className="break-all hover:text-text">{COMPANY.email}</a>
+              </li>
+            )}
+            <li>
+              <a href={COMPANY.instagram.url} target="_blank" rel="noopener noreferrer" className="hover:text-text">Instagram {COMPANY.instagram.handle}</a>
+            </li>
+          </ul>
         </div>
 
         {/* Mapa só carrega sob demanda (não pesa a página) */}

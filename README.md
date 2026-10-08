@@ -21,19 +21,25 @@ npm run build && npm start
 | Cores e tokens | `assets/design-tokens.json` → `node <skills>/design-system/scripts/generate-tokens.cjs --config assets/design-tokens.json -o src/styles/tokens.css` |
 | Voz da marca e mensagens | `docs/brand-guidelines.md` |
 
+## Fontes
+
+- **Google Maps** (dados passados pelo Victor): endereço, WhatsApp, horário, nota 4,9 (42 avaliações), depoimentos.
+- **Facebook oficial** (facebook.com/artengeletrica): logo, fotos das obras, caso real da conta (R$ 878,07 → R$ 59,55), Instagram @artengeletrica, e-mail, locais de obras.
+- **Logo**: reconstruído em vetor a partir do arquivo enviado pelo cliente (`docs/logo-original-cliente.jpg`). Letras em Montserrat e legenda em Oswald SemiBold, convertidas em curvas. Versões em `public/brand/`.
+- **Vídeo do hero**: montado a partir das fotos de drone das obras (fábrica Ideal Portas e Janelas, casas em São Bernardo, pousada em MG).
+
 ## A CONFIRMAR COM O CLIENTE
 
-1. **Logo**: o atual é **provisório** (tipográfico: "A" em forma de telhado com o sol). Trocar pelo oficial em `public/brand/`.
-2. **Vídeo do hero**: provisório, de banco gratuito (Mixkit #46623, licença comercial permitida). É uma usina em campo, não uma obra da Art. Ideal: vídeo real de drone de uma instalação da Art.
-3. **Fotos de obras**: a galeria mostra 5 espaços marcados "foto da obra em breve". Usar **somente** fotos reais (legenda: tipo de imóvel + bairro/cidade).
-4. **Parâmetros do simulador** (`simulator.config.ts`): economia de 80% da conta, tarifa de R$ 1,00/kWh, placa de referência de 550 Wp e geração de 115 kWh/kWp/mês. Validar com o Rodrigo.
-5. **Serviços elétricos** (engenharia elétrica e outros serviços): aparecem porque o Google cadastra a empresa como "eletricista". Confirmar o que é oferecido.
-6. **Cidades atendidas** além de Santo André.
-7. **Prazo médio** do processo (hoje o site cita o relato de 35 dias de um cliente).
-8. **Garantias** (equipamentos e instalação) e **formas de pagamento/financiamento**.
-9. **Instagram, e-mail e CNPJ**: campos `null` em `company.ts`. Não aparecem até serem preenchidos.
-10. **Nomes nos depoimentos**: hoje "Cliente via Google". Se os clientes autorizarem, usar nome ou iniciais.
-11. **Domínio**: definir `NEXT_PUBLIC_SITE_URL` e publicar sem `NEXT_PUBLIC_PREVIEW`.
+1. **Telefone e bairro em conflito**: Google = (11) 98263-5120 e "Vila Junqueira"; Facebook = (11) 98775-1806 e "Vila Linda". O site usa o Google.
+2. **Vídeo de drone original**: o hero hoje é uma montagem das fotos. Um vídeo de drone real de uma obra deixaria a abertura ainda mais forte.
+3. **Fotos em alta resolução**: as do Facebook têm 900–1440 px. Os originais do celular/drone melhorariam a galeria.
+4. **Parâmetros do simulador** (`simulator.config.ts`): 80% de economia, R$ 1,00/kWh, placa de 550 Wp, 115 kWh/kWp/mês. Validar com o Rodrigo.
+5. **Serviços elétricos** (engenharia elétrica e outros): confirmar o que é oferecido.
+6. **Raio de atendimento oficial** (o site cita os locais das obras publicadas: Santo André, São Bernardo, São Paulo e Córrego do Bom Jesus-MG).
+7. **Garantias** e **formas de pagamento/financiamento**.
+8. **CNPJ** (campo `null` em `company.ts`).
+9. **Nomes nos depoimentos**: hoje "Cliente via Google".
+10. **Domínio**: definir `NEXT_PUBLIC_SITE_URL` e publicar sem `NEXT_PUBLIC_PREVIEW`.
 
 ## Segurança
 
