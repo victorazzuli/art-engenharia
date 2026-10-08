@@ -106,3 +106,49 @@
   vertical-align: 1px;
   background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 9'><path d='M3 0h6L6 9H0z' fill='%232F8256'/><path d='M11 0h6l-3 9H8z' fill='%23626596'/><path d='M19 0h6l-3 9h-6z' fill='%23FD680B'/></svg>") no-repeat center / contain;
 }
+
+/* ===== Cena animada do hero (HeroScene.tsx) — ciclo de 14 s =====
+   O estilo base de cada elemento é o estado FINAL; as animações partem do "vazio". */
+.hs { --hs: 14s; }
+.hs-mono { font-family: var(--font-mono), ui-monospace, monospace; }
+.hs .hs-glow { animation: hs-glow var(--hs) ease-in-out infinite; }
+.hs .hs-sun { animation: hs-sun var(--hs) cubic-bezier(.22,1,.36,1) infinite; }
+.hs .hs-beam { animation: hs-beam var(--hs) ease-in-out infinite; }
+.hs .hs-lines path { stroke-dasharray: 1; animation: hs-draw var(--hs) ease-in-out infinite; }
+.hs .hs-panel { animation: hs-panel var(--hs) cubic-bezier(.22,1,.36,1) infinite; animation-delay: calc(var(--i) * 0.16s); transform-box: fill-box; transform-origin: center; }
+.hs .hs-cells { animation: hs-cells var(--hs) ease-in-out infinite; }
+.hs .hs-glint { animation: hs-glint var(--hs) ease-in-out infinite; }
+.hs .hs-flow { animation: hs-flow 0.9s linear infinite, hs-flow-vis var(--hs) ease-in-out infinite; }
+.hs .hs-wait { animation: hs-wait var(--hs) step-end infinite; opacity: 0; }
+.hs .hs-ok, .hs .hs-ok-ring { animation: hs-ok var(--hs) ease-out infinite; }
+.hs .hs-bill { animation: hs-bill var(--hs) cubic-bezier(.22,1,.36,1) infinite; }
+.hs .hs-strike { stroke-dasharray: 1; animation: hs-strike var(--hs) ease-in-out infinite; }
+.hs .hs-after { animation: hs-after var(--hs) ease-out infinite; }
+.hs .hs-c1 { animation: hs-c1 var(--hs) ease-out infinite; }
+.hs .hs-c2 { animation: hs-c2 var(--hs) ease-out infinite; }
+.hs .hs-c3 { animation: hs-c3 var(--hs) ease-out infinite; }
+.hs-paused, .hs-paused * { animation-play-state: paused !important; }
+
+@keyframes hs-glow   { 0% { opacity: 0 } 28% { opacity: 1 } 93% { opacity: 1 } 100% { opacity: 0 } }
+@keyframes hs-sun    { 0% { transform: translateY(260px); opacity: 0 } 6% { opacity: 1 } 28% { transform: none } 93% { transform: none; opacity: 1 } 100% { transform: none; opacity: 0 } }
+@keyframes hs-beam   { 0%, 20% { opacity: 0 } 30% { opacity: 1 } 90% { opacity: 1 } 100% { opacity: 0 } }
+@keyframes hs-draw   { 0% { stroke-dashoffset: 1; opacity: 1 } 12% { stroke-dashoffset: 0 } 93% { stroke-dashoffset: 0; opacity: 1 } 100% { stroke-dashoffset: 0; opacity: 0 } }
+@keyframes hs-panel  { 0%, 18% { opacity: 0; transform: translateY(-26px) scale(.96) } 24% { opacity: 1; transform: none } 93% { opacity: 1; transform: none } 100% { opacity: 0; transform: none } }
+@keyframes hs-cells  { 0%, 30% { opacity: 0 } 36% { opacity: 1 } 93% { opacity: 1 } 100% { opacity: 0 } }
+@keyframes hs-glint  { 0%, 36% { transform: skewX(-20deg) translateX(-60px) } 48% { transform: skewX(-20deg) translateX(700px) } 100% { transform: skewX(-20deg) translateX(700px) } }
+@keyframes hs-flow   { to { stroke-dashoffset: -40 } }
+@keyframes hs-flow-vis { 0%, 42% { opacity: 0 } 46% { opacity: 1 } 93% { opacity: 1 } 100% { opacity: 0 } }
+@keyframes hs-wait   { 0% { opacity: 0 } 40% { opacity: 1 } 58% { opacity: 0 } 100% { opacity: 0 } }
+@keyframes hs-ok     { 0%, 58% { opacity: 0 } 62% { opacity: 1 } 93% { opacity: 1 } 100% { opacity: 0 } }
+@keyframes hs-bill   { 0%, 62% { opacity: 0; transform: translateY(18px) } 67% { opacity: 1; transform: none } 93% { opacity: 1; transform: none } 100% { opacity: 0; transform: none } }
+@keyframes hs-strike { 0%, 70% { stroke-dashoffset: 1 } 74% { stroke-dashoffset: 0 } 100% { stroke-dashoffset: 0 } }
+@keyframes hs-after  { 0%, 74% { opacity: 0; transform: translateY(8px) } 79% { opacity: 1; transform: none } 93% { opacity: 1 } 100% { opacity: 0 } }
+@keyframes hs-c1     { 0%, 6% { opacity: 0 } 12% { opacity: 1 } 93% { opacity: 1 } 100% { opacity: 0 } }
+@keyframes hs-c2     { 0%, 22% { opacity: 0 } 28% { opacity: 1 } 93% { opacity: 1 } 100% { opacity: 0 } }
+@keyframes hs-c3     { 0%, 58% { opacity: 0 } 64% { opacity: 1 } 93% { opacity: 1 } 100% { opacity: 0 } }
+
+@media (prefers-reduced-motion: reduce) {
+  .hs *, .hs .hs-lines path, .hs .hs-strike { animation: none !important; }
+  .hs .hs-wait { opacity: 0 !important; }
+  .hs .hs-glint { display: none; }
+}

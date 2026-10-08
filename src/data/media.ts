@@ -1,13 +1,7 @@
 /**
- * Mídias do site — tudo REAL, da página oficial da Art no Facebook (facebook.com/artengeletrica).
- *
- * HERO: vídeo montado a partir das fotos de drone das obras da Art (zoom lento + fusão):
- * fábrica Ideal Portas e Janelas, residências em São Bernardo do Campo e pousada em MG.
- * Quando houver um vídeo de drone original, basta trocar os arquivos abaixo.
+ * Mídias do site — fotos REAIS da página oficial da Art no Facebook (facebook.com/artengeletrica).
+ * O hero não usa vídeo: é uma cena animada em código (src/components/HeroScene.tsx).
  */
-export const HERO_VIDEO_SRC = { mp4: "/video/hero-1280.mp4", webm: "/video/hero-1280.webm", mobile: "/video/hero-mobile.mp4" };
-export const HERO_VIDEO_POSTER = { desktop: "/video/hero-poster.webp", mobile: "/video/hero-poster-mobile.webp" };
-export const HERO_VIDEO_CREDIT = "Obras reais da Art";
 
 /** Galeria de obras: fotos publicadas pela Art. Legenda = tipo + local, como nos posts da empresa. */
 export type WorkPhoto = { src: string | null; alt: string; caption?: string; place?: string; w?: number; h?: number };

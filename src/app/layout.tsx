@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Archivo, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { COMPANY, WHATSAPP_NUMBER } from "@/data/company";
-import { HERO_VIDEO_POSTER } from "@/data/media";
 
 const archivo = Archivo({ subsets: ["latin"], axes: ["wdth"], variable: "--font-archivo", display: "swap" });
 const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500"], variable: "--font-mono", display: "swap" });
@@ -59,10 +58,6 @@ const jsonLd = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="pt-BR" className={`${archivo.variable} ${mono.variable}`}>
-      <head>
-        <link rel="preload" as="image" href={HERO_VIDEO_POSTER.mobile} media="(max-width: 767px)" fetchPriority="high" />
-        <link rel="preload" as="image" href={HERO_VIDEO_POSTER.desktop} media="(min-width: 768px)" fetchPriority="high" />
-      </head>
       <body>
         <a href="#simulador" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-xl focus:bg-primary focus:px-5 focus:py-3 focus:text-ink">
           Pular para o simulador
